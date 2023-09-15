@@ -1,4 +1,5 @@
 let menuVisible = false;
+let descargar = document.getElementById("descargarpdf");
 
 function mostrarOcultarMenu(){
     if (menuVisible) {
@@ -36,3 +37,15 @@ function efectoHabilidades(){
 window.onscroll = function(){
     efectoHabilidades();
 }
+
+descargar.addEventListener('click',() => {
+    var pdf = "./img/Mendez Avelino.pdf";
+    var link = document.createElement('a');
+    link.href = pdf;
+    link.download = "curriculum-de-avelino-mendez-pdf";
+
+    document.body.appendChild(link);
+    link.click();
+
+    document.body.removeChild(link);
+})
