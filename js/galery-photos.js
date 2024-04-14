@@ -1,7 +1,6 @@
-const url = "https://644578ceb80f57f581badc90.mockapi.io/projects";
 var galleryPhotos = document.querySelector('.galeria');
 
-fetch(url)
+fetch("https://644578ceb80f57f581badc90.mockapi.io/projects")
     .then(response => response.json())
     .then(data => dataPortfoleo(data))
     .catch(error => console.error(error));
